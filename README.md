@@ -41,7 +41,7 @@ To train a model, navigate to the directory containing the training script and r
 For generic models:
 
 ```bash
-python training_script.py --train_data_dir <path> --val_data_dir <path> --test_data_dir <path>
+python cnn_training_script.py --train_data_dir <path> --val_data_dir <path> --test_data_dir <path>
 ```
 
 For AutoKeras models (single and multi-GPU):
