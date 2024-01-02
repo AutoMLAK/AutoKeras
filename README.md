@@ -1,4 +1,4 @@
-# Image Classification with On-Premise AutoML
+# Medical Image Classification with On-Premise AutoML
 
 This repository contains scripts to train and evaluate machine learning models for medical imaging tasks using AutoML approaches, specifically focusing on CNN-based architectures and AutoKeras. The training scripts allow for flexibility in terms of models and datasets, while the evaluation scripts provide metrics to gauge model performance. 
 This work is related to the research pre-print - Kabilan Elangovan, Gilbert Lim, Daniel Ting et al. Medical Image Classification with On-Premise AutoML: Unveiling Insights through Comparative Analysis, 25 July 2023, PREPRINT (Version 1) available at Research Square [https://doi.org/10.21203/rs.3.rs-3172493/v1]
