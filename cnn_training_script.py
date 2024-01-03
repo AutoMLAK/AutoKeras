@@ -6,7 +6,7 @@ from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from tensorflow.keras.models import Model
 from tensorflow.keras.layers import GlobalAveragePooling2D, Dense, Input
 from tensorflow.keras.callbacks import ModelCheckpoint, EarlyStopping
-from tensorflow.keras.applications import VGG16, InceptionV3, DenseNet201
+from tensorflow.keras.applications import VGG16, InceptionV3, DenseNet201, ResNet50
 from tensorflow.keras.utils import to_categorical
 
 def get_base_model(name="vgg16", img_width=224, img_height=224, channels=3):
@@ -17,6 +17,8 @@ def get_base_model(name="vgg16", img_width=224, img_height=224, channels=3):
         return InceptionV3(weights='imagenet', include_top=False, input_shape=input_shape)
     elif name == "densenet201":
         return DenseNet201(weights='imagenet', include_top=False, input_shape=input_shape)
+    elif name == "resnet50":
+        return ResNet50(weights='imagenet', include_top=False, input_shape=input_shape)
     else:
         raise ValueError("Model not supported")
 
@@ -39,7 +41,6 @@ def main(args):
         fill_mode='constant',
         height_shift_range=0.10,
         brightness_range=(0.55, 0.9),
-        validation_split=0.2
     )
 
     valid_test_datagen = ImageDataGenerator(rescale=1./255)
